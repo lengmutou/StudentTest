@@ -3,4 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 508888
-    url: jdbc:mysql://localhost:3306/zy?serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3307/spring?serverTimezone=Asia/Shanghai
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
