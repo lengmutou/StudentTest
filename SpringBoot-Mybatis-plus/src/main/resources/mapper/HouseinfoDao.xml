@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lengmu.dao.HouseinfoDao">
-    <resultMap id="BaseResultMap" type="com.lengmu.entity.Houseinfo">
+    <resultMap id="HouseInfo" type="com.lengmu.entity.Houseinfo">
         <id column="hid" jdbcType="INTEGER" property="hid"/>
         <result column="harea" jdbcType="VARCHAR" property="harea"/>
         <result column="hname" jdbcType="VARCHAR" property="hname"/>
@@ -20,5 +20,11 @@
             <result column="urealname" jdbcType="VARCHAR" property="urealname"/>
         </association>
     </resultMap>
-
+    <select id="selectAll" resultMap="HouseInfo">
+        select * from houseinfo h left join userinfo  u on h.uid=u.uid
+        ${ew.customSqlSegment}
+    </select>
+    <insert id="insert">
+        insert into houseinfo values (null,1,"测试区","保利花园","1室1厅","66","精装","5/55","6666",null,"156457","出租！！")
+    </insert>
 </mapper>

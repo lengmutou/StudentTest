@@ -3,6 +3,30 @@
   <component name="PersistentConfig">
     <option name="historyConfigList">
       <map>
+        <entry key="houseinfo">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="HouseinfoDao" />
+              <option name="daoPackage" value="com.lengmu.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Houseinfo" />
+              <option name="modelPackage" value="com.lengmu.entity" />
+              <option name="name" value="houseinfo" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="hid" />
+              <option name="projectFolder" value="$PROJECT_DIR$/SpringBoot-Mybatis-plus" />
+              <option name="tableName" value="houseinfo" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
         <entry key="shop">
           <value>
             <Config>
@@ -42,7 +66,7 @@
               <option name="needToStringHashcodeEquals" value="true" />
               <option name="overrideJava" value="true" />
               <option name="overrideXML" value="true" />
-              <option name="primaryKey" value="userId" />
+              <option name="primaryKey" value="uid" />
               <option name="projectFolder" value="$PROJECT_DIR$/SpringBoot-Mybatis-plus" />
               <option name="tableName" value="userinfo" />
               <option name="useLombokPlugin" value="true" />

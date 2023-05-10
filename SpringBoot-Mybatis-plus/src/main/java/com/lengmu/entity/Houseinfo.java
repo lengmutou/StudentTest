@@ -12,7 +12,7 @@ import lombok.Data;
  * @author 
  */
 @Data
-@TableName(value = "houseinfo",autoResultMap = true)
+@TableName(value = "houseinfo",resultMap = "HouseInfo")
 public class Houseinfo implements Serializable {
     @TableId(type = IdType.AUTO,value = "hid")
     private Integer hid;
