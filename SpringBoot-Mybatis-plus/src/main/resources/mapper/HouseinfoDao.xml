@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lengmu.dao.HouseinfoDao">
+    <resultMap id="BaseResultMap" type="com.lengmu.entity.Houseinfo">
+        <id column="hid" jdbcType="INTEGER" property="hid"/>
+        <result column="harea" jdbcType="VARCHAR" property="harea"/>
+        <result column="hname" jdbcType="VARCHAR" property="hname"/>
+        <result column="hfx" jdbcType="VARCHAR" property="hfx"/>
+        <result column="hmj" jdbcType="VARCHAR" property="hmj"/>
+        <result column="hzx" jdbcType="VARCHAR" property="hzx"/>
+        <result column="hlc" jdbcType="VARCHAR" property="hlc"/>
+        <result column="hzj" jdbcType="VARCHAR" property="hzj"/>
+        <result column="hfd" jdbcType="VARCHAR" property="hfd"/>
+        <result column="hfdtel" jdbcType="VARCHAR" property="hfdtel"/>
+        <result column="hqk" jdbcType="VARCHAR" property="hqk"/>
+        <association property="userinfo" javaType="com.lengmu.entity.Userinfo">
+            <id column="uid" jdbcType="INTEGER" property="uid"/>
+            <result column="uame" jdbcType="VARCHAR" property="uame"/>
+            <result column="upsw" jdbcType="VARCHAR" property="upsw"/>
+            <result column="urealname" jdbcType="VARCHAR" property="urealname"/>
+        </association>
+    </resultMap>
+
+</mapper>

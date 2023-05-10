@@ -5,72 +5,8 @@
     <id column="sid" jdbcType="INTEGER" property="sid" />
     <result column="product_name" jdbcType="VARCHAR" property="productName" />
     <result column="price" jdbcType="DOUBLE" property="price" />
-    <result column="stock" jdbcType="INTEGER" property="stock" />
   </resultMap>
-  <sql id="Base_Column_List">
-    sid, product_name, price, stock
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from shop
-    where sid = #{sid,jdbcType=INTEGER}
+  <select id="selectAll" resultType="list">
+    select * from shop
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from shop
-    where sid = #{sid,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" keyColumn="sid" keyProperty="sid" parameterType="com.lengmu.entity.Shop" useGeneratedKeys="true">
-    insert into shop (product_name, price, stock
-      )
-    values (#{productName,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{stock,jdbcType=INTEGER}
-      )
-  </insert>
-  <insert id="insertSelective" keyColumn="sid" keyProperty="sid" parameterType="com.lengmu.entity.Shop" useGeneratedKeys="true">
-    insert into shop
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="productName != null">
-        product_name,
-      </if>
-      <if test="price != null">
-        price,
-      </if>
-      <if test="stock != null">
-        stock,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="productName != null">
-        #{productName,jdbcType=VARCHAR},
-      </if>
-      <if test="price != null">
-        #{price,jdbcType=DOUBLE},
-      </if>
-      <if test="stock != null">
-        #{stock,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lengmu.entity.Shop">
-    update shop
-    <set>
-      <if test="productName != null">
-        product_name = #{productName,jdbcType=VARCHAR},
-      </if>
-      <if test="price != null">
-        price = #{price,jdbcType=DOUBLE},
-      </if>
-      <if test="stock != null">
-        stock = #{stock,jdbcType=INTEGER},
-      </if>
-    </set>
-    where sid = #{sid,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.lengmu.entity.Shop">
-    update shop
-    set product_name = #{productName,jdbcType=VARCHAR},
-      price = #{price,jdbcType=DOUBLE},
-      stock = #{stock,jdbcType=INTEGER}
-    where sid = #{sid,jdbcType=INTEGER}
-  </update>
 </mapper>

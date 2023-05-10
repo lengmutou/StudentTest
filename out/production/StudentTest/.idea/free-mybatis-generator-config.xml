@@ -3,6 +3,30 @@
   <component name="PersistentConfig">
     <option name="historyConfigList">
       <map>
+        <entry key="shop">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ShopDao" />
+              <option name="daoPackage" value="com.lengmu.dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Shop" />
+              <option name="modelPackage" value="com.lengmu.entity" />
+              <option name="name" value="shop" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="sid" />
+              <option name="projectFolder" value="$PROJECT_DIR$/SpringBoot-Mybatis-plus" />
+              <option name="tableName" value="shop" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
         <entry key="userinfo">
           <value>
             <Config>

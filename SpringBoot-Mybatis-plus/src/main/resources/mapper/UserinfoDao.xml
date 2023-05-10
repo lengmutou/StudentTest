@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lengmu.dao.UserinfoDao">
+  <resultMap id="BaseResultMap" type="com.lengmu.entity.Userinfo">
+    <id column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="uame" jdbcType="VARCHAR" property="uame" />
+    <result column="upsw" jdbcType="VARCHAR" property="upsw" />
+    <result column="urealname" jdbcType="VARCHAR" property="urealname" />
+  </resultMap>
+
+</mapper>

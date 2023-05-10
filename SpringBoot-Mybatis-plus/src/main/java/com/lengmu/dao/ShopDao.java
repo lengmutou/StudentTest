@@ -3,6 +3,8 @@ package com.lengmu.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lengmu.entity.Shop;
 
+import java.util.List;
+
 public interface ShopDao extends BaseMapper<Shop> {
     int deleteByPrimaryKey(Integer sid);
 
@@ -15,4 +17,5 @@ public interface ShopDao extends BaseMapper<Shop> {
     int updateByPrimaryKeySelective(Shop record);
 
     int updateByPrimaryKey(Shop record);
+    List<Shop> selectAll();
 }
