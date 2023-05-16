@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /*
@@ -6,13 +7,16 @@ import java.util.Scanner;
  */
 public class test012 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int i = scanner.nextInt();
-        String s = String.valueOf(i);
-        String str = "";
-        for (int j = 0; j < s.length(); j++) {
-            str = s.charAt(j)+str;
+        int number = 20;
+        BigInteger jc= BigInteger.valueOf(1);
+        long in = 1;
+        for (int i = 2; i <= number ; i++) {
+            jc= jc.multiply(BigInteger.valueOf(i));
+            in *=i;
+            System.out.println(i);
         }
-        System.out.println(Integer.parseInt(str));
+        System.out.println("in  "+in);
+        System.out.println(number  + " 的阶乘是：");
+        System.out.println(jc.toString());
     }
 }

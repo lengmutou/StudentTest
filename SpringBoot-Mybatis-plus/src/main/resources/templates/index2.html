@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" tppabs="/layui/css/layui.css" media="all">
+    <script src="/js/jQuery.js"></script>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+</head>
+<style>
+    div{
+        width: 800px;
+        margin: auto;
+    }
+</style>
+<body>
+<div>
+<form class="layui-form">
+    <table class="layui-table">
+        <tr>
+            <th>物品ID</th>
+            <th>物品名称</th>
+            <th>价格</th>
+        </tr>
+        <tr th:each="shop :${shops}">
+            <td th:text="${shop.sid}"></td>
+            <td th:text="${shop.productName}"></td>
+            <td th:text="${shop.price}"></td>
+        </tr>
+    </table>
+
+
+</form>
+</div>
+</body>
+</html>
