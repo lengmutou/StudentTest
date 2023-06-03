@@ -12,6 +12,7 @@ import lombok.Data;
  * @author 
  */
 @Data
+
 public class Shop implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer sid;

@@ -19,11 +19,16 @@ public class test extends Object {
             }
         }
 //        Arrays.stream(arr).forEach(System.out::print);
-        test(System.out::println);
+//        test(System.out::println);
     }
-    public static void test(jk jk){
-        jk.test("我是test");
-    }
+//    public String test(){
+//            try{
+//            }catch (Exception e){
+//
+//            }finally {
+//
+//            }
+//    }
 
 }
 abstract class test01{
