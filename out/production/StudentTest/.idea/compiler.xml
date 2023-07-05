@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBoot-Mybatis-plus" />
+        <module name="Redis" />
       </profile>
     </annotationProcessing>
   </component>

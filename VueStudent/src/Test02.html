@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="jquery.min.js"></script>
+<!--<script src="vue.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+<body>
+    <div id="app">
+        转化前<input type="text" v-model:value="currentValue.value"><br>
+        转化后<input type="text" v-model:value="targetValue">
+    </div>
+<script>
+    let app = new Vue({
+        //挂载目标
+        el:"#app",
+        //属性
+        data:{
+            currentValue:{value:'aa',value2:'v2'},
+            targetValue:""
+        },
+        //计算属性
+        computed:{
+
+        },
+        //方法
+        methods:{
+
+        },
+        //监听器?
+        watch:{
+            currentValue :{
+                //深度监听 监听对象的所有属性
+                deep:true,
+                //开启初始化的时候就触发一次 默认是监听的属性发生变化才会触发.
+                immediate:true,
+                handler(n){
+                    clearTimeout(this.timeoutJ);
+                    this.timeoutJ=setTimeout(()=> {
+                        console.log(n.value)
+                        this.targetValue=n.value.toUpperCase();
+                    },2000);
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

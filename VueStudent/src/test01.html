@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+<body>
+<div id="app">
+    <table>
+        <tr><th>小黑笔记本</th></tr>
+        <tr><td><input type="text" v-model:value="nd" placeholder="请输入任务" ><button type="button" @click="addNote">添加</button></td></tr>
+        <tr v-for="(nd,index) in noteData" :key="nd.id"><td>{{index+1}}</td><td>{{nd.data}}</td><td><button type="button" @click="del(nd.id)">删除</button></td></tr>
+        <tr><td>合计{{noteData.length}}个</td><td><a @click="clear">清空任务</a></td></tr>
+        <tr><td>{{tcount}}</td></tr>
+    </table>
+</div>
+<script type="text/javascript">
+    Vue.config.productionTip = false;//关闭生产环境提示 提示如果是已上线的项目不要用这个
+
+    let vue = new Vue({
+        el:'#app',
+        data :{
+            nd:'',
+            noteData : [{id:100,data:'valueaaa'}],
+        },
+        methods:{
+            addNote(){
+                this.noteData.push({id:this.noteData.length,data:this.nd})
+            },
+            clear(){
+                this.noteData = [];
+            },
+            del(ndid){
+                this.noteData=this.noteData.filter((nd)=>{return nd.id!=ndid});
+            },
+        },
+        computed:{
+            tcount(){
+                return this.noteData.reduce((sum,item)=>sum+item.id,0);
+            }
+        },
+        watch:{
+            nd(newValue,oldValue){
+                console.log(newValue+" - "+oldValue);
+            },
+            'noteData'(newValue,oldValue){
+                console.log(newValue+" - "+oldValue);
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

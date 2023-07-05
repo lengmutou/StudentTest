@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SpringBoot-Mybatis-plus/SpringBoot-Mybatis-plus.iml" filepath="$PROJECT_DIR$/SpringBoot-Mybatis-plus/SpringBoot-Mybatis-plus.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/StudentTest.iml" filepath="$PROJECT_DIR$/.idea/StudentTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VueStudent/VueStudent.iml" filepath="$PROJECT_DIR$/VueStudent/VueStudent.iml" />
     </modules>
   </component>
 </project>
